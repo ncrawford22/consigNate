@@ -32,7 +32,7 @@ const deleteOneShoe = (req, res) => {
 
 // ROUTE    Put /shoes/:id    (update)
 const updateOneShoe = (req, res) => {
-    if (req.body.itemInStock === 'on') {
+    if (req.body.itemInStock === 'on' && req.body.numItemInstock > 0) {
         req.body.itemInStock = true
     } else {
         req.body.itemInStock = false
@@ -48,10 +48,11 @@ const updateOneShoe = (req, res) => {
 
 // ROUTE    POST /shoes    (create)
 const createNewShoe = (req, res) => {
-    if (req.body.itemInStock === 'on') {
+    if (req.body.itemInStock === 'on' && req.body.numItemInstock > 0) {
         req.body.itemInStock = true
     } else {
         req.body.itemInStock = false
+
     }
 
     Shoe.create(req.body, (err, createdShoe) => {
