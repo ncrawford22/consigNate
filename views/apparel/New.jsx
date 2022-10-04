@@ -25,6 +25,9 @@ class NewApparel extends React.Component {
                     <label htmlFor="sizeAvailable">Sizes Available: </label>
                     <input type="text" id="sizeAvailable" name="sizeAvailable"/>
 
+                    <label htmlFor='itemDetails'>Details: </label>
+                    <input type="textarea" id="itemDetails" name="itemDetails"/>
+
                     <input type="submit" value="Create Apparel"/>
                 </form>
             </DefaultLayout>

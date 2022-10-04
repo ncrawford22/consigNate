@@ -11,7 +11,8 @@ const apparelSchema = new Schema({
     price: {type: Number},
     itemInStock: {type: Boolean, default: true},
     numItemInstock: {type: Number},
-    sizeAvailable: {type: String}
+    sizeAvailable: {type: String},
+    itemDetails: {type: String}
 });
 
 // Create a Model from our Schema

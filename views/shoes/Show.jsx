@@ -4,7 +4,7 @@ const DefaultLayout = require('../layouts/DefaultLayout');
 
 class ShowShoes extends React.Component {
     render() {
-        const { brand, _id, name, price, itemInStock, numItemInstock, sizeAvailable } = this.props.shoe;
+        const { brand, _id, itemDetails, name, price, itemInStock, numItemInstock, sizeAvailable } = this.props.shoe;
 
         return (
             <DefaultLayout title={`${name} details`} Group="shoes">
@@ -25,7 +25,10 @@ class ShowShoes extends React.Component {
                 <br>
                 </br>
                 Size(s) Available: {sizeAvailable}
-                
+                <br>
+                </br>
+                Details: {itemDetails}
+
                 <button>
                     <a href={`/shoes/${_id}/edit`}>Edit</a>
                 </button>

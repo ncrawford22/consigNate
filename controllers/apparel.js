@@ -32,7 +32,7 @@ const deleteOneApparel = (req, res) => {
 
 // ROUTE    Put /apparel/:id    (update)
 const updateOneApparel = (req, res) => {
-    if (req.body.itemInStock === 'on') {
+    if (req.body.itemInStock === 'on' && req.body.numItemInstock > 0) {
         req.body.itemInStock = true
     } else {
         req.body.itemInStock = false
@@ -48,7 +48,7 @@ const updateOneApparel = (req, res) => {
 
 // ROUTE    POST /Apparels    (create)
 const createNewApparel = (req, res) => {
-    if (req.body.itemInStock === 'on') {
+    if (req.body.itemInStock === 'on' && req.body.numItemInstock > 0) {
         req.body.itemInStock = true
     } else {
         req.body.itemInStock = false

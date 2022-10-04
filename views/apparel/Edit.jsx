@@ -3,7 +3,7 @@ const DefaultLayout = require('../layouts/DefaultLayout');
 
 class EditApparel extends React.Component {
     render() {
-        const { brand, _id, name, price, itemInStock, numItemInstock, sizeAvailable } = this.props.apparel;
+        const { brand, _id, itemDetails, name, price, itemInStock, numItemInstock, sizeAvailable } = this.props.apparel;
 
         return (
             <DefaultLayout title={`Edit ${name}`} Group="apparel">
@@ -27,6 +27,9 @@ class EditApparel extends React.Component {
 
                     <label htmlFor="sizeAvailable">Size(s) Available: </label>
                     <input type="text" id="sizeAvailable" name="sizeAvailable" defaultValue={sizeAvailable}/>
+
+                    <label htmlFor='itemDetails'>Details: </label>
+                    <input type="textarea" id="itemDetails" name="itemDetails" defaultValue={itemDetails}/>
 
                     <input type="submit" value="Edit Apparel"/>
                 </form>
