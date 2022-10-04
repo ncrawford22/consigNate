@@ -2,12 +2,12 @@ const React = require('react');
 const DefaultLayout = require('../layouts/DefaultLayout');
 
 
-class ShowShoes extends React.Component {
+class ShowApparel extends React.Component {
     render() {
-        const { brand, _id, name, price, itemInStock, numItemInstock, sizeAvailable } = this.props.shoe;
+        const { brand, _id, name, price, itemInStock, numItemInstock, sizeAvailable } = this.props.apparel;
 
         return (
-            <DefaultLayout title={`${name} details`} Group="shoes">
+            <DefaultLayout title={`${name} details`} Group="apparel">
                 <h1> Show Page </h1>
                 {brand}
                 <br>
@@ -27,19 +27,19 @@ class ShowShoes extends React.Component {
                 Size(s) Available: {sizeAvailable}
                 
                 <button>
-                    <a href={`/shoes/${_id}/edit`}>Edit</a>
+                    <a href={`/apparel/${_id}/edit`}>Edit</a>
                 </button>
 
-                <form action={`/shoes/${_id}?_method=DELETE`} method="POST">
+                <form action={`/apparel/${_id}?_method=DELETE`} method="POST">
                     <input type="submit" value="Delete"/>
                 </form>
 
                 <nav>
-                    <a href="/shoes">Back</a>
+                    <a href="/apparel">Back</a>
                 </nav>
             </DefaultLayout>
         )
     }
 }
 
-module.exports = ShowShoes;
+module.exports = ShowApparel;

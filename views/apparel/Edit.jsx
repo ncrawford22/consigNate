@@ -1,14 +1,14 @@
 const React = require('react');
 const DefaultLayout = require('../layouts/DefaultLayout');
 
-class EditShoes extends React.Component {
+class EditApparel extends React.Component {
     render() {
-        const { brand, _id, name, price, itemInStock, numItemInstock, sizeAvailable } = this.props.shoe;
+        const { brand, _id, name, price, itemInStock, numItemInstock, sizeAvailable } = this.props.apparel;
 
         return (
-            <DefaultLayout title={`Edit ${name}`} Group="shoes">
+            <DefaultLayout title={`Edit ${name}`} Group="apparel">
                 <h1>Edit Page</h1>
-                <form action={`/shoes/${_id}?_method=PUT`} method="POST">
+                <form action={`/apparel/${_id}?_method=PUT`} method="POST">
                     
                     <label htmlFor='brand'>Brand: </label>
                     <input type="text" id="brand" name="brand" defaultValue={brand}/>
@@ -25,14 +25,14 @@ class EditShoes extends React.Component {
                     <label htmlFor="numItemInstock">Stock Amount: </label>
                     <input type="text" id="numItemInstock" name="numItemInstock" defaultValue={numItemInstock}/>
 
-                    <label htmlFor="sizeAvailable">Price: $</label>
+                    <label htmlFor="sizeAvailable">Size(s) Available: </label>
                     <input type="text" id="sizeAvailable" name="sizeAvailable" defaultValue={sizeAvailable}/>
 
-                    <input type="submit" value="Edit Shoe"/>
+                    <input type="submit" value="Edit Apparel"/>
                 </form>
             </DefaultLayout>
         )
     }
 }
 
-module.exports = EditShoes;
+module.exports = EditApparel;

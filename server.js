@@ -18,6 +18,7 @@ app.use(methodOverride('_method'));
 
 // Routes
 app.use('/shoes', require('./routes/shoeRoutes'));
+app.use('/apparel', require('./routes/apparelRoutes'));
 
 app.listen(PORT, () => console.log(`Listening on Port: ${PORT}`));
 

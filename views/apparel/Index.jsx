@@ -1,25 +1,25 @@
 const React = require('react');
 const DefaultLayout = require('../layouts/DefaultLayout');
 
-class IndexShoes extends React.Component {
+class IndexApparel extends React.Component {
     render() {
-        const { shoes } = this.props;
+        const { apparels } = this.props;
         return (
-            <DefaultLayout title="All Shoes" Group="shoes">
+            <DefaultLayout title="All Apparel" Group="apparel">
                 <body>
                     <h1>Index Page</h1>
-                    <ul id="shoes-index">
-                        {shoes.map((shoe, _id) => {
+                    <ul id="apparel-index">
+                        {apparels.map((apparel, _id) => {
                             return (
                                 <li key={_id}>
-                                    <a href={`/shoes/${shoe._id}`}>{shoe.brand}:&nbsp;&nbsp;{shoe.name}</a>  
+                                    <a href={`/apparel/${apparel._id}`}>{apparel.brand}:&nbsp;&nbsp;{apparel.name}</a>  
                                 </li>
                             )
                         })}
                     </ul>
 
                     <nav>
-                            <a href="shoes/new">Create a new shoe listing</a>
+                            <a href="apparel/new">Create a new apparel listing</a>
                     </nav>
                 </body>
             </DefaultLayout>
@@ -27,4 +27,4 @@ class IndexShoes extends React.Component {
     }
 }
 
-module.exports = IndexShoes;
+module.exports = IndexApparel;
