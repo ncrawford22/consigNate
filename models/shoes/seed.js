@@ -2,6 +2,7 @@ const shoes = [
     {
         brand: 'Nike',
         name: 'Supreme x Nike Dunk Low: Black/White',
+        imageUrl: '../images/supremexnikedunk.png',
         price: 900,
         itemInStock: true,
         numItemInstock: 1,
@@ -11,6 +12,7 @@ const shoes = [
     {
         brand: 'Adidas',
         name: 'Yeezy Boost 350 V2: Zebra',
+        imageUrl: '../images/yeezy350v2Zebra.png',
         price: 400,
         itemInStock: true,
         numItemInstock: 1,
@@ -20,6 +22,7 @@ const shoes = [
     {
         brand: 'Nike',
         name: 'Air Jordan 1 Retro High OG: Royal Toe',
+        imageUrl: '../images/aj1royaltoe.png',
         price: 331,
         itemInStock: true,
         numItemInstock: 1,
@@ -29,6 +32,7 @@ const shoes = [
     {
         brand: 'Adidas',
         name: 'Yeezy Foam Runner: Vermillion',
+        imageUrl: '../images/foamrunnervermillion.png',
         price: 415,
         itemInStock: true,
         numItemInstock: 1,

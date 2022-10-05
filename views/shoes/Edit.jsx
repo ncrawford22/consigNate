@@ -9,6 +9,9 @@ class EditShoes extends React.Component {
             <DefaultLayout title={`Edit ${name}`} Group="shoes">
                 <h1>Edit Page</h1>
                 <form action={`/shoes/${_id}?_method=PUT`} method="POST">
+
+                    <label htmlFor='imageUrl'>Image URL: </label>
+                    <input type="text" id="imageUrl" name="imageUrl"/>
                     
                     <label htmlFor='brand'>Brand: </label>
                     <input type="text" id="brand" name="brand" defaultValue={brand}/>

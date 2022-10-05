@@ -15,6 +15,11 @@ class ShowShoes extends React.Component {
                 {name}
                 <br>
                 </br>
+                <br>
+                </br>
+                <img src={imageUrl}></img>
+                <br>
+                </br>
                 ${price}
                 <br>
                 </br>
@@ -28,6 +33,12 @@ class ShowShoes extends React.Component {
                 <br>
                 </br>
                 Details: {itemDetails}
+
+                <form action={`/shoes/${_id}/purchase?_method=PUT`} method='POST'>
+                        <button>
+                            Buy Now
+                        </button>
+                </form>
 
                 <button>
                     <a href={`/shoes/${_id}/edit`}>Edit</a>

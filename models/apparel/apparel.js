@@ -8,6 +8,7 @@ const Schema = mongoose.Schema;
 const apparelSchema = new Schema({
     brand: { type: String, required: true},
     name: { type: String, required: true},
+    imageUrl: { type: String },
     price: {type: Number},
     itemInStock: {type: Boolean, default: true},
     numItemInstock: {type: Number},

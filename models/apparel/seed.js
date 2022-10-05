@@ -2,7 +2,8 @@ const apparels = [
     {
         brand: 'Levi',
         name: '501® Original Fit Men Jeans',
-        price: 900,
+        imageUrl: '../images/levi-jeans.png',
+        price: 70,
         itemInStock: true,
         numItemInstock: 1,
         sizeAvailable: "38x40",
@@ -11,6 +12,7 @@ const apparels = [
     {
         brand: 'Fear of God',
         name: 'Mens Essentials Hoodie',
+        imageUrl: '../images/essentialsFoGhoodies.png',
         price: 100,
         itemInStock: true,
         numItemInstock: 1,
@@ -20,6 +22,7 @@ const apparels = [
     {
         brand: 'Nike',
         name: 'Mens Diamon Shorts',
+        imageUrl: '../images/nikeshorts.png',
         price: 45,
         itemInStock: false,
         numItemInstock: 0,
@@ -29,6 +32,7 @@ const apparels = [
     {
         brand: 'Gucci',
         name: 'Marmont Belt',
+        imageUrl: '../images/gucci-belt.png',
         price: 520,
         itemInStock: true,
         numItemInstock: 1,

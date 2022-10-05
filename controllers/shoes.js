@@ -1,7 +1,6 @@
 const Shoe = require('../models/shoes/shoe');
 const seed = require('../models/shoes/seed');
 
-
 // ROUTE    GET /shoes     (index)
 const findAllShoes = (req, res) => {
     Shoe.find({}, (err, foundShoe) => {
@@ -87,6 +86,28 @@ const showOneShoePair = (req, res) => {
     });
 }
 
+// Buy Page
+const displayBuyPage = (req, res) => {
+    Shoe.findById(req.params.id, (err, buyShoe) => {
+        if (err) {
+            res.status(400).json(err)
+        } else {
+            res.status(200).render('/Confirmation')
+        }
+    });
+}
+
+// Buy
+const boughtShoe = (req, res) => {
+    Shoe.findOneAndUpdate({_id: req.params.id}, {$inc: {numItemInstock: - 1}}, (err, updatedShoe) => {
+        if (err) {
+            res.status(400).json(err)
+        } else {
+            res.status(200).redirect(`/shoes/${req.params.id}/confirmation`)
+        }
+    });
+}
+
 // ROUTE       GET /shoes/seed      (seed)
 const seedData = (req, res) => {
     Shoe.deleteMany({}, (err, deletedShoes) => {
@@ -121,9 +142,11 @@ module.exports = {
     showNewView,
     createNewShoe,
     showOneShoePair,
+    displayBuyPage,
+    boughtShoe,
     seedData,
     showEditView,
     updateOneShoe,
     deleteOneShoe,
-    clearData
+    clearData,
 }

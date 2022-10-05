@@ -15,11 +15,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(express.static("public"));
 app.use(methodOverride('_method'));
-// app.use(express.static('public'));
 
 // Routes
 app.use('/shoes', require('./routes/shoeRoutes'));
 app.use('/apparel', require('./routes/apparelRoutes'));
+app.use('/home', require('./routes/homeRoute'));
 
 app.listen(PORT, () => console.log(`Listening on Port: ${PORT}`));
 

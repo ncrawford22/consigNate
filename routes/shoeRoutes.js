@@ -1,13 +1,19 @@
 const express = require('express');
 const router = express.Router();
 
-const { findAllShoes, showNewView, deleteOneShoe, updateOneShoe, createNewShoe, showEditView, clearData, seedData, showOneShoePair } = require('../controllers/shoes');
+const { findAllShoes, showNewView, deleteOneShoe, updateOneShoe, createNewShoe, showEditView, clearData, seedData, showOneShoePair, displayBuyPage, boughtShoe } = require('../controllers/shoes');
 
 // Setup "index" routes
 router.get('/', findAllShoes);
 
 // Setup "new" route
 router.get('/new', showNewView);
+
+// Confirmation
+router.get('/:id/confirmation', displayBuyPage)
+
+// Update after Confirmation
+router.put('/:id/confirmation', boughtShoe)
 
 // Setup "destroy" route
 router.delete('/:id', deleteOneShoe);

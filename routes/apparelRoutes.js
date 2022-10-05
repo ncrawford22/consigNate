@@ -1,13 +1,19 @@
 const express = require('express');
 const router = express.Router();
 
-const { findAllApparels, showNewView, deleteOneApparel, updateOneApparel, createNewApparel, showEditView, clearData, seedData, showOneApparel } = require('../controllers/apparel');
+const { findAllApparels, showNewView, deleteOneApparel, updateOneApparel, createNewApparel, showEditView, clearData, seedData, showOneApparel, displayBuyPage, boughtApparel } = require('../controllers/apparel');
 
 // Setup "index" routes
 router.get('/', findAllApparels);
 
 // Setup "new" route
 router.get('/new', showNewView);
+
+// Confirmation
+router.get('/:id/confirmation', displayBuyPage)
+
+// Update after Confirmation
+router.put('/:id/confirmation', boughtApparel)
 
 // Setup "destroy" route
 router.delete('/:id', deleteOneApparel);

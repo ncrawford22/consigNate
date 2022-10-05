@@ -4,7 +4,7 @@ const DefaultLayout = require('../layouts/DefaultLayout');
 
 class ShowApparel extends React.Component {
     render() {
-        const { brand, itemDetails, _id, name, price, itemInStock, numItemInstock, sizeAvailable } = this.props.apparel;
+        const { brand, itemDetails, _id, imageUrl, name, price, itemInStock, numItemInstock, sizeAvailable } = this.props.apparel;
 
         return (
             <DefaultLayout title={`${name} details`} Group="apparel">
@@ -13,6 +13,11 @@ class ShowApparel extends React.Component {
                 <br>
                 </br>
                 {name}
+                <br>
+                </br>
+                <br>
+                </br>
+                <img src={imageUrl}></img>
                 <br>
                 </br>
                 ${price}
@@ -28,6 +33,12 @@ class ShowApparel extends React.Component {
                 <br>
                 </br>
                 Details: {itemDetails}
+
+                <form action={`/apparel/${_id}/confirmation?_method=PUT`} method='POST'>
+                        <button>
+                            Buy Now
+                        </button>
+                </form>
 
                 <button>
                     <a href={`/apparel/${_id}/edit`}>Edit</a>

@@ -6,6 +6,9 @@ class NewShoes extends React.Component {
         return (
             <DefaultLayout title="Create a new shoe listing" Group="shoes">
                 <form action="/shoes" method="POST">
+
+                    <label htmlFor='imageUrl'>Image URL: </label>
+                    <input type="text" id="imageUrl" name="imageUrl"/>
                     
                     <label htmlFor='brand'>Brand: </label>
                     <input type="text" id="brand" name="brand"/>
