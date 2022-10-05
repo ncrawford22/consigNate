@@ -34,7 +34,7 @@ class ShowShoes extends React.Component {
                 </br>
                 Details: {itemDetails}
 
-                <form action={`/shoes/${_id}/purchase?_method=PUT`} method='POST'>
+                <form action={`/shoes/${_id}/confirmation?_method=PUT`} method='POST'>
                         <button>
                             Buy Now
                         </button>
