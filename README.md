@@ -8,7 +8,7 @@ A base website for a consignment shop used to showcase knowledge of backend and 
 
 ## Technologies 
 
-JavaScript with React, Node.js/Express.js, CSS
+JavaScript with React, Node.js/Express.js, CSS, MongoDB
 
 
 ## Installation

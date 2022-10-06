@@ -4,10 +4,10 @@ const DefaultLayout = require('./layouts/DefaultLayout');
 class Home extends React.Component {
     render() {
         return (
-            <DefaultLayout title="All Items"> 
+            <DefaultLayout title="consigNate"> 
 
                 <body>
-                    <h1>consigNate</h1>
+                    <h1 id="homeIndex">consigNate</h1>
 
                     <div className='gridbox-container'>
                     <div id='1' className='gridbox'><a href="shoes/"><img src="../images/aj1royaltoe.png" id='homeImg'></img></a></div>

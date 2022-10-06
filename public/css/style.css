@@ -194,3 +194,31 @@ body {
     height: 85%;
     width: 40%;
 }
+
+#homeIndex {
+    position: relative;
+    left: 50%;
+    bottom: 45px;    
+  }
+
+#homeIndex:hover {
+    position: relative;
+    left: 50%;
+    bottom: 45px;
+    animation: glitched 2s linear infinite;
+    animation-delay: calc(.1s * var(--i));
+    font-weight: bold;
+    
+  }
+
+  @keyframes glitched {
+    2%,64%{
+        transform: translate(2px,0) skew(0deg);
+    }
+    4%,60%{
+        transform: translate(-2px,0) skew(20deg);
+    }
+    62%{
+        transform: translate(0,0) skew(5deg); 
+    }
+}
