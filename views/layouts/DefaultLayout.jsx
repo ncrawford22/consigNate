@@ -7,8 +7,8 @@ class DefaultLayout extends React.Component {
                 <head>
                     <title>{this.props.title}</title>
                     <link rel='stylesheet' href='../css/style.css'/>
-                    <nav id="main">
-                    <a href='/home'>Home</a>&nbsp;&nbsp;<a href='/apparel'>Apparel</a>&nbsp;&nbsp;<a href='/shoes'>Shoes</a>
+                    <nav id="main-nav">
+                    <button><a href='/home'>Home</a></button>&nbsp;&nbsp;<button><a href='/apparel'>Apparel</a></button>&nbsp;&nbsp;<button><a href='/shoes'>Shoes</a></button>
                  </nav>
                  
                 </head>

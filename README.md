@@ -8,14 +8,21 @@ A base website for a consignment shop used to showcase knowledge of backend and 
 
 ## Technologies 
 
-JavaScript with React, Node.js/Express.js, CSS, MongoDB
+- JavaScript
+  - React 
+  - Node.js
+  - Express.js, 
+- CSS
+- HTML
+- MongoDB
 
 
 ## Installation
 
-Fork the repo into your repository.
+- Fork the repo into your repository.
 
-Use npm install and install all of the required packages that are listed in the package.json file.
+- Use npm install and install all of the required packages that are listed in the package.json file.
+- npm run server or install and run nodemon (npm i nodemon) then type nodemon in the termainal and press Enter to start
 
 ## Restful Routes
 
@@ -47,10 +54,10 @@ Use npm install and install all of the required packages that are listed in the 
 
 ## Future Additions & Plans
 
-User authentication
-Cart handling
-Refactoring
-Resize images
+- User authentication
+- Cart handling
+- Refactoring
+- Resize images
 
 ## Screenshots
 

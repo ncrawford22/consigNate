@@ -63,11 +63,13 @@ class ShowShoes extends React.Component {
                     </button>
 
                     <form action={`/shoes/${_id}?_method=DELETE`} method="POST">
-                        <input type="submit" value="Delete"/>
+                        <input type="submit" value="Delete" className='deletebtn'/>
                     </form>
 
                    
-                        <a href="/shoes">Back</a>
+                        <button>
+                            <a href="/shoes">Back</a>
+                        </button>
                     </nav>
                 </body>
             </DefaultLayout>

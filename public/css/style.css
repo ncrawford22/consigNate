@@ -1,8 +1,13 @@
-body, .showPageBody {
+body {
     background-image: url('../images/logo.gif');
     background-repeat: repeat;
     overflow-y: scroll;
     overflow-x: hidden;
+}
+
+button, .deletebtn {
+    box-shadow: 0 0 5px 4px grey;
+
 }
 
 .nameBrand {
@@ -14,7 +19,7 @@ body, .showPageBody {
     flex-wrap: wrap;
     background-color: whitesmoke;
     opacity: 0.85;
-    box-shadow: 0 0 2px 2px blue;
+    box-shadow: 0 0 10px 5px black;
     height: 250px;
     width: 200px;
     top: 200px;
@@ -35,11 +40,12 @@ body, .showPageBody {
     width: 20rem;
     height: 25rem;
     padding: 2rem;
-    box-shadow: 0 0 5px 5px blue;
+    box-shadow: 0 0 10px 5px black;
     position: relative;
     left: 40%;
     padding-bottom: 100px;
-    opacity: 0.95; 
+    opacity: 1; 
+    bottom: 150px;
 }
 
 #main > :visited{
@@ -49,7 +55,7 @@ body, .showPageBody {
 }
 
 .shoe-index {
-    opacity: .8;
+    opacity: 0.5;
     width: 70vw;
     margin-left: auto;
     margin-right: auto;
@@ -61,7 +67,7 @@ body, .showPageBody {
 }
 
 .apparel-index {
-    opacity: .8;
+    opacity: 1;
     width: 70vw;
     margin-left: auto;
     margin-right: auto;
@@ -77,11 +83,13 @@ body, .showPageBody {
     height: 100%;
     width: 100%;
     display: flex;
+    opacity: 1;
 }
 #apparelImg {
     height: 50%;
     width: 100%;
     display: flex;
+    opacity: 1;
 }
 
 #apparelConfirmation, #shoesConfirmation {
@@ -110,10 +118,11 @@ body, .showPageBody {
     width: 20rem;
     height: 25rem;
     padding: 2rem;
-    box-shadow: 0 0 5px 5px blue;
+    box-shadow: 0 0 10px 5px black;
     position: relative;
     left: 40%;
     padding-bottom: 100px;
+    opacity: 1;
 }
 
 .thanksConfirmation {
@@ -158,18 +167,20 @@ body, .showPageBody {
     display: flex;
     justify-content: center;
     justify-items: center;
-    left: 43%;
+    left: 42.5%;
     position: relative;
     flex-wrap: wrap;
     background-color: whitesmoke;
     opacity: 0.85;
-    box-shadow: 0 0 2px 2px blue;
+    box-shadow: 0 0 10px 5px black;
     width: 300px;
+    bottom: 100px;
 }
 
 #sizes {
     position: relative;
-    left: 2%;
+    left: 0.5%;
+    bottom: 190px;
 }
 
 #footer-nav {
@@ -178,15 +189,6 @@ body, .showPageBody {
     justify-items: center;
     gap: 25px;
     position: relative;
-    left: 2%;
-}
-
-.gridbox-container {
-    display: grid;
-    position: relative;
-    grid-template-columns: 1fr 2fr;
-    flex-direction: row;
-    left: 25%;
 
 }
 
@@ -227,4 +229,16 @@ body, .showPageBody {
     62%{
         transform: translate(0,0) skew(5deg); 
     }
+}
+
+
+.gridbox-container {
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    flex-direction: row;
+    justify-items: center;
+    left: 50px;
+    top: 200px;
+
 }

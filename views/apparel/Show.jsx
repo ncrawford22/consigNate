@@ -65,9 +65,11 @@ class ShowApparel extends React.Component {
                     </button>
 
                     <form action={`/apparel/${_id}?_method=DELETE`} method="POST">
-                        <input type="submit" value="Delete"/>
+                        <input type="submit" value="Delete" className='deletebtn'/>
                     </form>
+                        <button>
                         <a href="/apparel">Back</a>
+                        </button>
                     </nav>
                 </body>
                
