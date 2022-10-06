@@ -1,4 +1,4 @@
-body {
+body, .showPageBody {
     background-image: url('../images/logo.gif');
     background-repeat: repeat;
     overflow-y: scroll;
