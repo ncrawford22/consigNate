@@ -11,7 +11,7 @@ class EditShoes extends React.Component {
                 <form action={`/shoes/${_id}?_method=PUT`} method="POST">
 
                     <label htmlFor='imageUrl'>Image URL: </label>
-                    <input type="text" id="imageUrl" name="imageUrl"/>
+                    <input type="text" id="imageUrl" name="imageUrl" defaultValue={imageUrl}/>
                     
                     <label htmlFor='brand'>Brand: </label>
                     <input type="text" id="brand" name="brand" defaultValue={brand}/>

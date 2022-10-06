@@ -11,9 +11,7 @@ class Confirmation extends React.Component {
                     <p>
                         Thank you for buying the {name}!
                     </p>
-                    <a href={`/shoes/${_id}`}>
-                    </a>
-                    
+                    <a href={`/home`}>Continue Shopping?</a>
                 </div>
             </DefaultLayout>
         )

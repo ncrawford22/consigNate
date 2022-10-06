@@ -11,7 +11,7 @@ const shoeSchema = new Schema({
     name: { type: String, required: true},
     imageUrl: { type: String },
     price: {type: Number},
-    itemInStock: {type: Boolean, default: true},
+    itemInStock: {type: Boolean},
     numItemInstock: {type: Number},
     sizeAvailable: {type: String},
     itemDetails: {type: String}

@@ -3,7 +3,7 @@ const DefaultLayout = require('../layouts/DefaultLayout');
 
 class EditApparel extends React.Component {
     render() {
-        const { brand, _id, itemDetails, name, price, itemInStock, numItemInstock, sizeAvailable } = this.props.apparel;
+        const { brand, _id, itemDetails, imageUrl, name, price, itemInStock, numItemInstock, sizeAvailable } = this.props.apparel;
 
         return (
             <DefaultLayout title={`Edit ${name}`} Group="apparel">
@@ -11,7 +11,7 @@ class EditApparel extends React.Component {
                 <form action={`/apparel/${_id}?_method=PUT`} method="POST">
 
                     <label htmlFor='imageUrl'>Image URL: </label>
-                    <input type="text" id="imageUrl" name="imageUrl"/>
+                    <input type="text" id="imageUrl" name="imageUrl" defaultValue={imageUrl}/>
                     
                     <label htmlFor='brand'>Brand: </label>
                     <input type="text" id="brand" name="brand" defaultValue={brand}/>

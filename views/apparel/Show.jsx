@@ -23,10 +23,20 @@ class ShowApparel extends React.Component {
                 ${price}
                 <br>
                 </br>
-                {itemInStock ? "INSTOCK" : "OUT OF STOCK"}
+                <div id="stockCheck">
+                    {itemInStock == false ? "OUT OF STOCK! Check back soon..." : numItemInstock == 0 ? "OUT OF STOCK! Check back soon..." : "INSTOCK"}
+                </div>
                 <br>
                 </br>
-                Stock Available: {numItemInstock}
+                Stock Available: {numItemInstock == 0 ? "OUT OF STOCK" : numItemInstock}
+                    {numItemInstock == 0 ? <button id="oos">SOLD OUT</button> : 
+                        
+                        <form action={`/apparel/${_id}/confirmation?_method=PUT`} method='POST'>
+                            <button className="buyButton">
+                                Buy Now
+                            </button>
+                        </form>
+                    }
                 <br>
                 </br>
                 Size(s) Available: {sizeAvailable}
@@ -34,11 +44,6 @@ class ShowApparel extends React.Component {
                 </br>
                 Details: {itemDetails}
 
-                <form action={`/apparel/${_id}/confirmation?_method=PUT`} method='POST'>
-                        <button>
-                            Buy Now
-                        </button>
-                </form>
 
                 <button>
                     <a href={`/apparel/${_id}/edit`}>Edit</a>
