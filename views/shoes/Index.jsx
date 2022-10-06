@@ -5,21 +5,25 @@ class IndexShoes extends React.Component {
     render() {
         const { shoes } = this.props;
         return (
-            <DefaultLayout title="All Shoes"> <a href='/home'>Home</a>&nbsp;&nbsp;<a href='/apparel'>Apparel</a>
+            <DefaultLayout title="All Shoes">
                 <body>
                     <h1>Shoes</h1>
-                    <ul id="shoes-index">
-                        {shoes.map((shoe, _id) => {
+                    <div id="shoes-index">
+                        {shoes.map((shoe) => {
                             return (
-                                <li key={_id}>
-                                    <a href={`/shoes/${shoe._id}`}>{shoe.brand}:&nbsp;&nbsp;{shoe.name}
-                                        <img src={shoe.imageUrl}></img>
+                                <div key={shoe.id} className="shoeListing">
+                                    <h2>{shoe.brand}</h2>
+                                    <h3>{shoe.name}</h3>
+                                    <br>
+                                    </br>
+                                        <a href={`/shoes/${shoe._id}`}>
+                                        <img src={shoe.imageUrl} id="shoeImg"></img>
                                     </a>
-                                    &nbsp;&nbsp;${shoe.price}   
-                                </li>
+                                        <h4 id="shoesH4">{'Price: $' + shoe.price} </h4>  
+                                    </div>
                             )
                         })}
-                    </ul>
+                    </div>
 
                     <nav>
                             <a href="shoes/new">Create a new shoe listing</a>

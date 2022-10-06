@@ -1,0 +1,196 @@
+body {
+    background-image: url('../images/logo.gif');
+    background-repeat: repeat;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.nameBrand {
+    display: flex;
+    justify-content: space-between;
+    justify-content: center;
+    left: 43%;
+    position: relative;
+    flex-wrap: wrap;
+    background-color: whitesmoke;
+    opacity: 0.85;
+    box-shadow: 0 0 2px 2px blue;
+    height: 250px;
+    width: 200px;
+    top: 200px;
+    right: 0;
+    bottom: 0;
+    left: 20%;
+}
+.showPageBody {
+    text-align: center;
+}
+
+.apparelWrapper, .shoesWrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    width: 20rem;
+    height: 25rem;
+    padding: 2rem;
+    box-shadow: 0 0 5px 5px blue;
+    position: relative;
+    left: 40%;
+    padding-bottom: 100px;
+    opacity: 0.95; 
+}
+
+#main > :visited{
+    position: relative;
+    
+    color: black;
+}
+
+.shoe-index {
+    opacity: .8;
+    width: 70vw;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 10vh;
+}
+
+.apparel-index {
+    opacity: .8;
+    width: 70vw;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 10vh;
+}
+
+
+#shoeImg {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+#apparelImg {
+    height: 50%;
+    width: 100%;
+    display: flex;
+}
+
+#apparelConfirmation, #shoesConfirmation {
+    background-color: black;
+}
+
+#confirmationImg {
+    position: relative;
+    top: 0;
+    bottom: 25%;
+    left: 25%;
+    right: 55%;
+    z-index: 99;
+}
+
+#confirmationNav > :visited{
+    color: whitesmoke;
+}
+
+.shoeListing, .apparelListing {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    width: 20rem;
+    height: 25rem;
+    padding: 2rem;
+    box-shadow: 0 0 5px 5px blue;
+    position: relative;
+    left: 40%;
+    padding-bottom: 100px;
+}
+
+.thanksConfirmation {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 60%;
+    bottom: 0;
+    color: whitesmoke;
+    z-index: 99;
+}
+
+
+#shoesH4 {
+    position: relative;
+    top: 30px;
+    bottom: 0;
+    left: 45%;
+}
+
+#apparelH4 {
+    display: flex;
+    justify-content: space-between;
+    justify-items: right;
+    position: relative;
+    top: -300px;
+    bottom: 0;
+    left: 45%;
+}
+
+#apparelShowImg {
+    height: 65%;
+    width: 65%;
+}
+
+#shoesShowImg {
+    height: 100%;
+    width: 100%;
+}
+
+#details {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    left: 43%;
+    position: relative;
+    flex-wrap: wrap;
+    background-color: whitesmoke;
+    opacity: 0.85;
+    box-shadow: 0 0 2px 2px blue;
+    width: 300px;
+}
+
+#sizes {
+    position: relative;
+    left: 2%;
+}
+
+#footer-nav {
+    display: inline-flex;
+    justify-content: space-evenly;
+    justify-items: center;
+    gap: 25px;
+    position: relative;
+    left: 2%;
+}
+
+.gridbox-container {
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 2fr;
+    flex-direction: row;
+    left: 30%;
+
+}
+
+#homeImg {
+    height: 85%;
+    width: 40%;
+}

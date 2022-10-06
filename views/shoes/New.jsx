@@ -4,7 +4,7 @@ const DefaultLayout = require('../layouts/DefaultLayout');
 class NewShoes extends React.Component {
     render() {
         return (
-            <DefaultLayout title="Create a new shoe listing" Group="shoes">
+            <DefaultLayout title="Create a new shoe listing">
                 <form action="/shoes" method="POST">
 
                     <label htmlFor='imageUrl'>Image URL: </label>

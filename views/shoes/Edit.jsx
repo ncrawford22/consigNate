@@ -6,7 +6,7 @@ class EditShoes extends React.Component {
         const { brand, _id, itemDetails, imageUrl, name, price, itemInStock, numItemInstock, sizeAvailable } = this.props.shoe;
 
         return (
-            <DefaultLayout title={`Edit ${name}`} Group="shoes">
+            <DefaultLayout title={`Edit ${name}`}>
                 <h1>Edit Page</h1>
                 <form action={`/shoes/${_id}?_method=PUT`} method="POST">
 

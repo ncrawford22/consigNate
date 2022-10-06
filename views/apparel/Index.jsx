@@ -5,21 +5,25 @@ class IndexApparel extends React.Component {
     render() {
         const { apparels } = this.props;
         return (
-            <DefaultLayout title="All Apparel"> <a href='/home'>Home</a>&nbsp;&nbsp;<a href='/shoes'>Shoes</a>
+            <DefaultLayout title="All Apparel">
                 <body>
                     <h1>Apparel</h1>
-                    <ul id="apparel-index">
-                        {apparels.map((apparel, _id) => {
+                    <div id="apparel-index">
+                        {apparels.map((apparel) => {
                             return (
-                                <li key={_id}>
-                                    <a href={`/apparel/${apparel._id}`}>{apparel.brand}:&nbsp;&nbsp;{apparel.name}
-                                        <img src={apparel.imageUrl}></img>
-                                    </a>
-                                        &nbsp;&nbsp;${apparel.price}  
-                                </li>
+                                    <div key={apparel._id} className="apparelListing">
+                                        <h2>{apparel.brand}</h2>
+                                        <h3>{apparel.name}</h3>
+                                        <br>
+                                        </br>
+                                        <a href={`/apparel/${apparel._id}`}>
+                                            <img src={apparel.imageUrl} id="apparelImg"></img>
+                                        </a>
+                                        <h4 id="apparelH4">{'Price: $' + apparel.price} </h4>  
+                                    </div>
                             )
                         })}
-                    </ul>
+                    </div>
 
                     <nav>
                             <a href="apparel/new">Create a new apparel listing</a>
