@@ -43,7 +43,6 @@ Use npm install and install all of the required packages that are listed in the 
 | PUT | shoes/:id/confirmation | Buying a pair of shoes
 | POST | /apparel | Create an apparel
 | POST | /shoes| Create a shoe
-| ------------- | ------------- | ------------ |
 
 
 ## Future Additions & Plans
