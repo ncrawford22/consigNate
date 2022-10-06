@@ -45,7 +45,7 @@ const updateOneApparel = (req, res) => {
         }
     });}
 
-// ROUTE    POST /Apparels    (create)
+// ROUTE    POST /apparel    (create)
 const createNewApparel = (req, res) => {
     if (req.body.itemInStock === 'on' && req.body.numItemInstock > 0) {
         req.body.itemInStock = true

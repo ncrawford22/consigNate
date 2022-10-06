@@ -21,6 +21,10 @@ app.use('/shoes', require('./routes/shoeRoutes'));
 app.use('/apparel', require('./routes/apparelRoutes'));
 app.use('/home', require('./routes/homeRoute'));
 
+app.get('/',(req,res) => {
+    res.redirect("/home")
+})
+
 app.listen(PORT, () => console.log(`Listening on Port: ${PORT}`));
 
 mongoConfig();
